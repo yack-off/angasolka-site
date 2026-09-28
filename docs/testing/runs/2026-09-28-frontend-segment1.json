@@ -1,0 +1,134 @@
+{
+  "ready": true,
+  "origin": "http://127.0.0.1:4183",
+  "commandId": "dc58c25b-059d-483c-9b54-5f2b1291bbc2",
+  "commandResult": {
+    "ok": true
+  },
+  "orders": [
+    {
+      "status": "pending",
+      "total_minor": 600000
+    },
+    {
+      "status": "pending",
+      "total_minor": 300000
+    },
+    {
+      "status": "pending",
+      "total_minor": 300200
+    }
+  ],
+  "events": [
+    {
+      "path": "/api/v1/content",
+      "mode": "normal",
+      "status": 200
+    },
+    {
+      "path": "/api/v1/catalog",
+      "mode": "normal",
+      "status": 200
+    },
+    {
+      "path": "/api/v1/quotes",
+      "mode": "normal",
+      "status": 200,
+      "total": 600000,
+      "discount": 0
+    },
+    {
+      "path": "/api/v1/orders",
+      "mode": "delay-after",
+      "sameKeyAsPrevious": false,
+      "sameBodyAsPrevious": false,
+      "status": 201,
+      "replayed": false,
+      "sameOrderAsPrevious": false,
+      "total": 600000
+    },
+    {
+      "path": "/api/v1/content",
+      "mode": "normal",
+      "status": 200
+    },
+    {
+      "path": "/api/v1/catalog",
+      "mode": "normal",
+      "status": 200
+    },
+    {
+      "path": "/api/v1/quotes",
+      "mode": "normal",
+      "status": 200,
+      "total": 300000,
+      "discount": 0
+    },
+    {
+      "path": "/api/v1/orders",
+      "mode": "drop-after",
+      "sameKeyAsPrevious": false,
+      "sameBodyAsPrevious": false,
+      "status": 201,
+      "replayed": false,
+      "sameOrderAsPrevious": false,
+      "total": 300000
+    },
+    {
+      "path": "/api/v1/orders",
+      "mode": "normal",
+      "sameKeyAsPrevious": true,
+      "sameBodyAsPrevious": true,
+      "status": 200,
+      "replayed": true,
+      "sameOrderAsPrevious": true,
+      "total": 300000
+    },
+    {
+      "path": "/api/v1/content",
+      "mode": "normal",
+      "status": 200
+    },
+    {
+      "path": "/api/v1/catalog",
+      "mode": "normal",
+      "status": 200
+    },
+    {
+      "path": "/api/v1/quotes",
+      "mode": "normal",
+      "status": 200,
+      "total": 300000,
+      "discount": 0
+    },
+    {
+      "path": "/api/v1/orders",
+      "mode": "normal",
+      "sameKeyAsPrevious": false,
+      "sameBodyAsPrevious": false,
+      "status": 409
+    },
+    {
+      "path": "/api/v1/quotes",
+      "mode": "normal",
+      "status": 200,
+      "total": 300200,
+      "discount": 0
+    },
+    {
+      "path": "/api/v1/orders",
+      "mode": "normal",
+      "sameKeyAsPrevious": false,
+      "sameBodyAsPrevious": false,
+      "status": 201,
+      "replayed": false,
+      "sameOrderAsPrevious": false,
+      "total": 300200
+    }
+  ],
+  "policy": {
+    "version": 2,
+    "discount_nights": 5,
+    "discount_percent": 10
+  }
+}

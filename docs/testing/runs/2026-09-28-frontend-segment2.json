@@ -1,0 +1,141 @@
+{
+  "ready": true,
+  "origin": "http://127.0.0.1:4183",
+  "commandId": "55ddf869-70d3-4701-a2b0-b22bb30a2a34",
+  "commandResult": {
+    "ok": true
+  },
+  "orders": [
+    {
+      "status": "contacted",
+      "total_minor": 300000
+    }
+  ],
+  "events": [
+    {
+      "path": "/api/v1/content",
+      "mode": "normal",
+      "status": 200
+    },
+    {
+      "path": "/api/v1/catalog",
+      "mode": "normal",
+      "status": 200
+    },
+    {
+      "path": "/api/v1/quotes",
+      "mode": "normal",
+      "status": 200,
+      "total": 600000,
+      "discount": 0
+    },
+    {
+      "path": "/api/v1/quotes",
+      "mode": "normal",
+      "status": 200,
+      "total": 675000,
+      "discount": 75000
+    },
+    {
+      "path": "/api/v1/content",
+      "mode": "normal",
+      "status": 200
+    },
+    {
+      "path": "/api/v1/catalog",
+      "mode": "normal",
+      "status": 200
+    },
+    {
+      "path": "/api/v1/quotes",
+      "mode": "normal",
+      "status": 200,
+      "total": 300000,
+      "discount": 0
+    },
+    {
+      "path": "/api/v1/orders",
+      "mode": "500",
+      "sameKeyAsPrevious": false,
+      "sameBodyAsPrevious": false,
+      "status": 500
+    },
+    {
+      "path": "/api/v1/orders",
+      "mode": "429",
+      "sameKeyAsPrevious": false,
+      "sameBodyAsPrevious": false,
+      "status": 429
+    },
+    {
+      "path": "/api/v1/orders",
+      "mode": "timeout-after",
+      "sameKeyAsPrevious": false,
+      "sameBodyAsPrevious": false,
+      "status": 201,
+      "replayed": false,
+      "sameOrderAsPrevious": false,
+      "total": 300000
+    },
+    {
+      "path": "/api/v1/orders",
+      "mode": "normal",
+      "sameKeyAsPrevious": true,
+      "sameBodyAsPrevious": true,
+      "status": 200,
+      "replayed": true,
+      "sameOrderAsPrevious": true,
+      "total": 300000
+    },
+    {
+      "path": "/api/v1/orders/status",
+      "mode": "normal",
+      "authorizationPresent": true,
+      "queryPresent": false,
+      "status": 200
+    },
+    {
+      "path": "/api/v1/orders/status",
+      "mode": "normal",
+      "authorizationPresent": true,
+      "queryPresent": false,
+      "status": 404
+    },
+    {
+      "path": "/api/v1/orders/status",
+      "mode": "normal",
+      "authorizationPresent": true,
+      "queryPresent": false,
+      "status": 200
+    },
+    {
+      "path": "/api/v1/orders/status",
+      "mode": "500",
+      "authorizationPresent": true,
+      "queryPresent": false,
+      "status": 500
+    },
+    {
+      "path": "/api/v1/orders/status",
+      "mode": "timeout",
+      "authorizationPresent": true,
+      "queryPresent": false,
+      "status": "delayed-before"
+    },
+    {
+      "path": "/api/v1/content",
+      "mode": "normal",
+      "status": 200
+    },
+    {
+      "path": "/api/v1/catalog",
+      "mode": "normal",
+      "status": 200
+    }
+  ],
+  "policy": {
+    "version": 1,
+    "discount_nights": 5,
+    "discount_percent": 10
+  }
+}

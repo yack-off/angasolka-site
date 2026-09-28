@@ -1,0 +1,36 @@
+# Install inside nginx's http{} context after replacing EVERY YOUR_DOMAIN.example.
+# RSA/ECDSA PEM server certificate + intermediates, including certificates issued by the Russian NUC.
+# Root CA is not sent in fullchain.pem. Keep the private key outside the project/web root.
+server {
+    listen 80;
+    server_name YOUR_DOMAIN.example;
+    return 308 https://YOUR_DOMAIN.example$request_uri;
+}
+server {
+    listen 443 ssl;
+    server_name YOUR_DOMAIN.example;
+    ssl_certificate /etc/angasolka/tls/fullchain.pem;
+    ssl_certificate_key /etc/angasolka/tls/privkey.pem;
+    ssl_protocols TLSv1.2 TLSv1.3;
+    ssl_session_cache shared:AngasolkaTLS:10m;
+    ssl_session_timeout 1d;
+    ssl_session_tickets off;
+    server_tokens off;
+    client_max_body_size 12m;
+
+    # Avoid query strings (potential secrets) in access logs.
+    access_log off;
+    location / {
+        proxy_pass http://127.0.0.1:4180;
+        proxy_http_version 1.1;
+        proxy_set_header Host YOUR_DOMAIN.example;
+        proxy_set_header X-Forwarded-Host YOUR_DOMAIN.example;
+        proxy_set_header X-Forwarded-Proto https;
+        # This template is for a single, directly exposed proxy. Overwrite spoofable headers.
+        proxy_set_header X-Forwarded-For $remote_addr;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header Connection "";
+        proxy_connect_timeout 5s;
+        proxy_read_timeout 30s;
+    }
+}

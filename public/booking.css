@@ -1,0 +1,104 @@
+/* Accommodation is the primary offer. Loaded after the place photo styles. */
+html{scroll-padding-top:104px}
+[hidden]{display:none!important}
+.header{position:sticky;top:0;z-index:50;height:88px;background:#fffffffa;border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
+.header .nav-camp{color:var(--muted);font-size:12px}
+.header>.button.small{display:inline-flex}
+.header nav{gap:20px}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) 390px;align-items:center;gap:45px;min-height:690px;padding:48px max(4%,calc((100% - 1280px)/2)) 64px;margin:16px 20px 0;background-position:center 62%;border-radius:14px}
+.hero-shade{background:linear-gradient(90deg,#092239bf, #09223935 60%,#09223920),linear-gradient(0deg,#09223955,transparent 30%)}
+.hero-content{padding:0;margin:0;min-width:0}
+.hero h1{font-size:clamp(54px,5.5vw,84px);letter-spacing:-3px;line-height:1.06;margin:22px 0 25px}
+.hero h1 em{font-size:.88em;color:#ffcc9f}
+.hero-content>.eyebrow{font-size:11px;letter-spacing:1.8px;color:#e2f5ff}
+.hero p{font-size:16px;line-height:1.8}
+.hero-content>.text-link{margin-top:15px}
+.hero-facts{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px;font-size:11px;color:#f0f6fa}
+.hero-facts span{padding:7px 11px;border:1px solid #ffffff60;border-radius:30px;background:#12395f30}
+.hero>.hero-location{position:absolute;bottom:20px;left:4%;font-size:11px;color:#ecf5fa}
+.booking-bar{display:flex;flex-direction:column;align-items:stretch;gap:17px;width:100%;margin:0;padding:28px;border-radius:12px;border:1px solid #ffffff9c;background:#fff;color:var(--ink);box-shadow:0 12px 50px #09223930}
+.booking-heading .eyebrow{display:block;font-size:10px;letter-spacing:1.5px;color:#55718b;margin:0 0 9px}
+.booking-heading h2{font-size:26px;letter-spacing:-.8px;line-height:1.3}
+.booking-rate{display:flex;align-items:baseline;gap:10px;margin-top:15px}
+.booking-rate strong{font-size:29px;letter-spacing:-1px}
+.booking-rate span{font-size:12px;color:var(--muted)}
+.rate-disclaimer{font-size:11px;color:var(--muted)}
+.booking-fields{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.booking-bar label{padding:10px 12px;gap:4px;border:1px solid #cbd9e5;border-radius:6px;min-width:0;background:#fbfdff}
+.booking-bar label:focus-within{border-color:#1379a7;box-shadow:0 0 0 2px #1379a715}
+.booking-bar label>span{font-size:10px;letter-spacing:1px}
+.booking-bar input,.booking-bar select{font-size:14px;font-weight:600;min-height:30px}
+.booking-bar .button{font-size:13px;gap:10px;min-height:54px;padding:14px 17px}
+.quick-estimate{display:grid;grid-template-columns:1fr auto;gap:3px 10px;align-items:center;border-top:1px solid var(--line);padding-top:14px;font-size:12px}
+.quick-estimate strong{font-size:23px}
+.quick-estimate small{grid-column:1/-1;color:#267459;font-size:11px}
+.quick-estimate small:empty{display:none}
+.hero .booking-hint{margin:0;font-size:11px;line-height:1.6;color:var(--muted)}
+.booking-steps{display:flex;gap:25px;justify-content:space-between;padding:25px 0;border-bottom:1px solid var(--line);font-size:12px;color:var(--muted)}
+.booking-steps b{display:inline-block;color:#0084b0;font-size:11px;margin-right:10px}
+#stay{padding-top:64px}
+.stay-card h3{font-size:31px}
+.stay-card .price-row{gap:16px}
+.stay-card .price-row .button{flex-shrink:0;font-size:12px;padding:12px 16px;gap:16px}
+.stay-card .price-row .button span{font-size:20px;color:inherit}
+.stay-questions{margin-top:38px;padding-top:28px;border-top:1px solid var(--line)}
+.stay-questions>h3{font-size:23px;margin:0 0 20px}
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 38px;align-items:start}
+.faq-grid details{border-bottom:1px solid var(--line);padding:17px 0}
+summary{cursor:pointer;font-weight:700;list-style:none;position:relative;padding-right:30px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:'+';position:absolute;right:2px;top:0;font-size:22px;line-height:1.25;font-weight:400}
+details[open]>summary:after{content:'−'}
+.faq-grid summary{font-size:14px}
+.faq-grid p{font-size:14px;color:var(--muted);margin-bottom:0}
+.faq-grid a{text-decoration:underline;text-underline-offset:3px}
+.location-intro{padding-bottom:50px}
+.camp-section{padding:40px 0;background:#f4f7fa;border-top:1px solid var(--line)}
+.camp-layout{grid-template-columns:220px 1fr;gap:35px;max-width:1000px}
+.camp-memory>a{border-radius:8px}
+.camp-memory>a>img{aspect-ratio:4/3}
+.camp-copy h2{font-size:27px;letter-spacing:-.6px}
+.camp-copy>.eyebrow{font-size:10px;letter-spacing:1.3px;margin-bottom:10px}
+.camp-copy p{font-size:14px;max-width:700px;margin:13px 0}
+.camp-note{font-size:11px;margin-top:10px}
+.mobile-booking{display:none}
+.period-card{padding:20px;background:var(--soft);border:1px solid var(--line);border-radius:8px}
+.period-card .eyebrow{display:block;font-size:9px;margin:0 0 9px;letter-spacing:1px}
+.period-card .footer-link{margin-top:10px}
+.booking-extras[open] .extra-row:last-child{border-bottom:0}
+.booking-extras{margin-top:24px;border-bottom:1px solid var(--line);padding-bottom:18px}
+.booking-extras>summary{font-size:15px}
+.booking-extras>summary>span{display:block;font-size:12px;color:var(--muted);font-weight:400;margin-top:5px}
+.day-visit{margin-top:20px;color:var(--muted);font-size:12px}
+.day-visit summary{font-weight:500}
+.stay-switch{margin:0;padding-bottom:0;border:0}
+.next-note{margin-top:30px;font-size:14px}
+.next-note p{color:var(--muted);font-size:13px;line-height:1.8}
+.summary .full.footer-link{min-height:40px;background:none;text-align:center}
+#contact-step>h3{font-size:25px;margin:20px 0 10px}
+#request-form label{display:flex;flex-direction:column;gap:8px;font-size:14px;font-weight:700;margin-top:18px}
+#request-form input,#request-form textarea{font:inherit;font-weight:400;font-size:16px;border:1px solid #c0d1df;border-radius:6px;min-width:0;width:100%;padding:12px;color:var(--ink);background:white}
+#request-form textarea{resize:vertical}
+#request-form .optional{font-size:11px;font-weight:400;color:var(--muted)}
+#phone-help{display:block;font-size:11px;color:var(--muted);margin-top:5px}
+#request-form .button{margin-top:24px}
+#request-result h3{font-size:28px;margin:20px 0 10px}
+#request-result>p{font-size:14px;color:var(--muted)}
+#request-preview{white-space:pre-wrap;overflow-wrap:anywhere;font:12px/1.8 var(--font);background:var(--soft);padding:18px;border-radius:6px;max-height:280px;overflow:auto}
+#edit-request{margin-top:15px}
+textarea:focus-visible,summary:focus-visible{outline:3px solid #dc7626;outline-offset:4px}
+@media(min-width:1600px){.hero{grid-template-columns:minmax(0,1fr) 420px;min-height:730px}}
+@media(max-width:1150px){.header nav{gap:14px;font-size:12px}.header{padding:0 28px;gap:15px}.header .brand{font-size:16px}.header .brand-symbol{width:38px;height:38px}.header>.button.small{padding:10px 12px;font-size:12px;gap:12px}.hero{gap:28px;padding-left:4%;padding-right:4%;grid-template-columns:minmax(0,1fr) 350px}.hero h1{font-size:64px}.booking-bar{padding:24px}.stay-card{padding:28px}}
+@media(max-width:950px){.header nav a[href='#offers'],.header nav a[href='#experiences']{display:none}.hero{grid-template-columns:minmax(0,1fr) 330px;gap:20px}.hero h1{font-size:55px}.hero-content>p br{display:none}.hero-facts{display:block}.hero-facts span{display:table;margin-top:8px}.booking-bar{padding:22px}.booking-steps{gap:12px;font-size:11px}.stay-card .price-row{align-items:flex-start;flex-direction:column}.stay-card .price-row .button{width:100%}.stay-card h3{font-size:27px}}
+@media(max-width:700px){
+ html{scroll-padding-top:88px}body{padding-bottom:90px}.header{height:74px;padding:0 18px}.header .brand{font-size:17px}.header>.button.small{display:none}.header nav a[href='#offers'],.header nav a[href='#experiences']{display:block}.header nav{top:74px;font-size:15px}.header nav .nav-camp{font-size:14px}.menu-toggle{padding:8px}
+ .hero{display:block;margin:0;padding:0 18px 22px;border-radius:0;min-height:0;background-position:64% top;background-size:auto 580px;background-repeat:no-repeat;background-color:#eaf1f6;overflow:hidden}
+ .hero-shade{height:580px;background:linear-gradient(180deg,#0922399e,#09223940 72%,#eaf1f6)}
+ .hero-content{padding:26px 6px 22px;position:relative}.hero h1{font-size:48px;line-height:1.04;letter-spacing:-1.8px;margin:14px 0}.hero h1 br{display:none}.hero h1 em{display:block;font-size:.9em;margin-top:8px}.hero-content>.eyebrow{font-size:9px;letter-spacing:1.1px}.hero-content>p{font-size:13px;max-width:340px;margin:12px 0;line-height:1.65}.hero-content>.text-link{font-size:11px;margin-top:0}.hero-facts{display:none}
+ .hero>.hero-location{display:none}.booking-bar{padding:22px;margin:0;gap:14px;position:relative;box-shadow:0 12px 25px #15384e12;border-color:#dbe5ed}.booking-heading h2{font-size:24px}.booking-rate{margin-top:10px}.booking-rate strong{font-size:27px}.booking-fields{gap:10px}.booking-bar label{padding:9px 10px;border:1px solid #cbd9e5}.booking-bar label:nth-child(2){border:1px solid #cbd9e5}.booking-bar input{font-size:14px}.booking-bar .button{font-size:14px}.booking-hint{max-width:100%}
+ .booking-steps{flex-direction:column;gap:9px;padding:22px 0;font-size:12px}.booking-steps b{margin-right:12px}#stay{padding-top:40px}.stay-card .price-row{flex-direction:row;align-items:center;gap:12px}.stay-card .price-row .button{width:auto;padding:12px;font-size:11px;gap:8px}.stay-card .price-row strong{font-size:23px}.stay-card .price-row span{font-size:11px}.stay-card{padding:24px}.stay-card h3{font-size:28px}
+ .faq-grid{grid-template-columns:1fr}.faq-grid summary{font-size:14px}.stay-questions{margin-top:28px}.location-intro{padding-bottom:34px}.camp-layout{grid-template-columns:90px 1fr;gap:18px;align-items:start}.camp-memory>a>img{aspect-ratio:1;object-position:40% center}.camp-copy h2{font-size:22px}.camp-copy>.eyebrow{font-size:8px;letter-spacing:.8px}.camp-copy p{font-size:13px;line-height:1.7}.camp-copy .text-link{font-size:12px;gap:10px}.camp-note{line-height:1.6}.camp-section{padding:32px 0}
+ .mobile-booking{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:55;align-items:center;justify-content:space-between;gap:12px;background:white;border-top:1px solid var(--line);box-shadow:0 -4px 22px #173e6c10;padding:12px 18px calc(12px + env(safe-area-inset-bottom))}.mobile-booking strong{font-size:17px;display:block;line-height:1.4}.mobile-booking strong small{font-size:10px;font-weight:400}.mobile-booking>div>span{font-size:9px;color:var(--muted);display:block}.mobile-booking a{text-decoration:underline;text-underline-offset:3px}.mobile-booking .button{font-size:12px;padding:12px 16px;white-space:nowrap}.mobile-booking.is-hidden,body:has(dialog[open]) .mobile-booking{display:none}
+ .dialog-body{padding:20px}.dialog-head{padding:20px}.summary{margin-top:24px;padding:20px}.period-card{padding:16px}.summary-line{font-size:12px}.summary .total strong{font-size:25px}.extra-row strong{font-size:13px}.stepper{gap:10px}.stepper button{width:36px;height:36px}.booking-extras>summary{font-size:14px}.dialog-head h2{font-size:25px}.booking-period{font-size:14px}
+}
+@media(max-width:360px){.hero h1{font-size:45px}.booking-bar{padding:18px}.booking-bar input{font-size:12px}.stay-card .price-row{flex-direction:column;align-items:stretch}.stay-card .price-row .button{width:100%}.mobile-booking{padding-left:12px;padding-right:12px;gap:8px}.mobile-booking .button{padding:10px}.mobile-booking strong{font-size:15px}}

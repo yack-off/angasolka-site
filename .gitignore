@@ -1,0 +1,12 @@
+node_modules/
+.pnpm-store/
+.env
+.env.*.tmp
+data/
+*.log
+test-results/
+certs/
+*.key
+*.pem
+*.pfx
+*.p12

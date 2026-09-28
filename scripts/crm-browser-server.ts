@@ -1,0 +1,20 @@
+// Disposable browser QA only: memory database, synthetic order, loopback listener.
+import {randomBytes,randomUUID} from 'node:crypto';
+import {connectDatabase,migrate} from '../src/db.js';
+import {buildApp} from '../src/app.js';
+import {passwordHash} from '../src/admin-auth.js';
+import {createOrder} from '../src/orders.js';
+import {quote} from '../src/pricing.js';
+const password=process.env.CRM_BROWSER_PASSWORD;
+if(!password||password.length<12)throw new Error('Set a temporary CRM_BROWSER_PASSWORD (12+ characters).');
+const db=await connectDatabase(undefined,'memory://');await migrate(db);
+await db.query("INSERT INTO staff(id,username,password_hash,role) VALUES($1,'crm-browser',$2,'owner')",[randomUUID(),await passwordHash(password)]);
+delete process.env.CRM_BROWSER_PASSWORD;
+const trip={arrival:new Date(Date.now()+10*86400000).toISOString().slice(0,10),departure:new Date(Date.now()+13*86400000).toISOString().slice(0,10),beds:2,extras:{}};
+const price=await quote(db,trip);
+await createOrder(db,{...trip,customer:{name:'Проверка CRM',phone:'+'+'0'.repeat(11)},comment:'Тестовый запрос: уточнить маршрут до турбазы.',consent:true,expectedTotalMinor:price.totalMinor,pricingVersion:price.pricingVersion,trackingToken:randomBytes(32).toString('hex')},randomUUID());
+const app=await buildApp(db,{origin:'http://127.0.0.1:4182',rateMax:10000});
+await app.listen({host:'127.0.0.1',port:4182});
+console.log('Disposable CRM browser test: http://127.0.0.1:4182/admin/');
+const close=async()=>{await app.close();await db.close();};
+process.once('SIGINT',close);process.once('SIGTERM',close);

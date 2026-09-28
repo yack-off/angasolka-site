@@ -1,0 +1,43 @@
+{
+  "ready": true,
+  "origin": "http://127.0.0.1:4183",
+  "commandId": "38745595-1bd3-4a26-b568-d3e132b3e5f3",
+  "commandResult": {
+    "ok": true
+  },
+  "orders": [],
+  "events": [
+    {
+      "path": "/api/v1/content",
+      "mode": "normal",
+      "status": 200
+    },
+    {
+      "path": "/api/v1/catalog",
+      "mode": "normal",
+      "status": 200
+    },
+    {
+      "path": "/api/v1/content",
+      "mode": "normal",
+      "status": 200
+    },
+    {
+      "path": "/api/v1/catalog",
+      "mode": "normal",
+      "status": 200
+    },
+    {
+      "path": "/api/v1/quotes",
+      "mode": "normal",
+      "status": 200,
+      "total": 795000,
+      "discount": 0
+    }
+  ],
+  "policy": {
+    "version": 3,
+    "discount_nights": 5,
+    "discount_percent": 10
+  }
+}
