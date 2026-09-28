@@ -10,7 +10,7 @@
     "dev": "tsx watch src/server.ts",
     "start": "tsx src/server.ts",
     "check": "tsc --noEmit",
-    "test": "tsx --test tests/*.test.ts",
+    "test": "tsx --test --test-concurrency=1 tests/*.test.ts",
     "db:migrate": "tsx src/migrate.ts",
     "admin:create": "tsx src/admin-create.ts",
     "tls:check": "tsx src/tls-check.ts",

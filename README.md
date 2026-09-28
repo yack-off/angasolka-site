@@ -20,6 +20,8 @@ pnpm check
 pnpm test
 ```
 
+На GitHub для каждого push в `main` и pull request запущены проверки TypeScript и тесты на PGlite. Отдельное задание запускает API-тесты на временном PostgreSQL. Ручные браузерные сценарии и production-развёртывание в этот workflow не входят.
+
 Настройки из `.env` загружаются автоматически; пример — `.env.example`. Для отдельного PostgreSQL задайте `DATABASE_URL`, выполните `pnpm db:migrate`, затем `pnpm start`. В production автоматические миграции отключены, обязательны PostgreSQL и HTTPS `PUBLIC_ORIGIN`. PGlite используется только для локальной разработки и тестов. Переключение URL не переносит локальные данные автоматически.
 
 ## Что работает
