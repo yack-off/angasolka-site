@@ -5,6 +5,8 @@ node_modules/
 data/
 *.log
 test-results/
+/docs/testing/runs/*
+!/docs/testing/runs/TEMPLATE.md
 certs/
 *.key
 *.pem
